@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:omran_store/core/app/env.variables.dart';
+
 class OmranStoreApp extends StatelessWidget {
   const OmranStoreApp({super.key});
 
@@ -7,13 +9,14 @@ class OmranStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Omran Store App',
+      debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Omran Store"),
+          title: const Text('Omran Store'),
         ),
       ),
     );
