@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:omran_store/core/app/connectivity_controller.dart';
 import 'package:omran_store/core/app/env.variables.dart';
 import 'package:omran_store/core/common/screens/no_network_screen.dart';
+import 'package:omran_store/core/style/fonts/font_family_helper.dart';
+import 'package:omran_store/core/style/fonts/font_weight_helper.dart';
 
 class OmranStoreApp extends StatelessWidget {
   const OmranStoreApp({super.key});
@@ -36,6 +38,46 @@ class OmranStoreApp extends StatelessWidget {
               home: Scaffold(
                 appBar: AppBar(
                   title: const Text('Store App'),
+                ),
+
+                body: const Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        'Test Font',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+
+                      Text(
+                        'إبراهيم عمران',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+
+
+                      // New
+                      Text(
+                        'Test Font',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: FontFamilyHelper.poppinsEnglish,
+                          fontWeight: FontWeightHelper.bold,
+                        ),
+                      ),
+
+                      Text(
+                        'إبراهيم عمران',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: FontFamilyHelper.cairoArabic,
+                          fontWeight: FontWeightHelper.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
