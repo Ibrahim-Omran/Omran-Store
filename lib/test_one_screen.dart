@@ -13,15 +13,29 @@ class TestOneScreen extends StatelessWidget {
         title: const Text('Test One'),
       ),
       body: Center(
-          child: TextButton(
-              onPressed: () {
+        child: Column(
+          children: [
+
+
+            Center(
+              child: TextButton(
+                onPressed: () {
                   context.pushNamed(AppRoutes.testTwo);
-              },
-              child: const Text('Go Two Screen',
+                },
+                child:  Text(
+                  'Go Two Screen',
                   style: TextStyle(
-                      color: Colors.white,
-                ),),
-      )),
+                    fontSize: 30,
+                    color: context.color.minColor,
+                  ),
+                ),
+              ),
+            ),
+
+            Image.asset(context.assets.testImage!),
+          ],
+        ),
+      ),
     );
   }
 }

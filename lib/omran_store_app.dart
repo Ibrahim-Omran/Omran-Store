@@ -4,6 +4,7 @@ import 'package:omran_store/core/app/connectivity_controller.dart';
 import 'package:omran_store/core/app/env.variables.dart';
 import 'package:omran_store/core/common/screens/no_network_screen.dart';
 import 'package:omran_store/core/routes/app_routes.dart';
+import 'package:omran_store/core/style/theme/app_theme.dart';
 
 
 class OmranStoreApp extends StatelessWidget {
@@ -21,10 +22,7 @@ class OmranStoreApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
               title: 'Store App',
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true,
-              ),
+              theme: themeLight(),
               builder: (context, widget) {
                 return Scaffold(
                   body: Builder(

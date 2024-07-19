@@ -6,7 +6,7 @@ class TestTwoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink,
+      //backgroundColor: Colors.pink,
       appBar: AppBar(
         title: const Text('Test Two'),
       ),
