@@ -27,7 +27,7 @@ class TestOneScreen extends StatelessWidget {
                   'Go Two Screen',
                   style: TextStyle(
                     fontSize: 30,
-                    color: context.color.minColor,
+                    color: context.color.mainColor,
                   ),
                 ),
               ),
@@ -41,7 +41,7 @@ class TestOneScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            Image.asset(context.assets.testImage!),
+           // Image.asset(context.assets.testImage!),
           ],
         ),
       ),
