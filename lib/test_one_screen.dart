@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:omran_store/core/extensions/context_extensions.dart';
+import 'package:omran_store/core/language/lang_keys.dart';
 import 'package:omran_store/core/routes/app_routes.dart';
 
 class TestOneScreen extends StatelessWidget {
@@ -32,6 +33,14 @@ class TestOneScreen extends StatelessWidget {
               ),
             ),
 
+
+            Text(
+              context.translate(LangKeys.appName),
+              style: const TextStyle(
+                fontSize: 33,
+                color: Colors.black,
+              ),
+            ),
             Image.asset(context.assets.testImage!),
           ],
         ),
