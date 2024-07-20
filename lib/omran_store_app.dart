@@ -22,7 +22,7 @@ class OmranStoreApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
               title: 'Store App',
-              theme: themeLight(),
+              theme: themeDark(),
               locale: Locale('en'),
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localeResolutionCallback:
@@ -45,7 +45,7 @@ class OmranStoreApp extends StatelessWidget {
                 );
               },
               onGenerateRoute: AppRoutes.onGenerateRoutes,
-              initialRoute: AppRoutes.testOne,
+              initialRoute: AppRoutes.login,
             ),
           );
         } else {

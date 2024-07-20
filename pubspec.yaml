@@ -21,6 +21,9 @@ dependencies:
   flutter_dotenv: ^5.1.0
   flutter_screenutil: ^5.9.0
   flutter_native_splash: ^2.3.10
+
+  #UI Animation
+  animate_do: ^3.3.2
   #firebase
   firebase_core: ^2.27.0
 
@@ -48,10 +51,13 @@ flutter:
   assets:
     - .env.dev
     - .env.prod
-    - assets/images/core/
-    - assets/images/icons/
     - lang/ar.json
     - lang/en.json
+    - assets/images/core/
+    - assets/images/admin/
+    - assets/images/customer/
+    - assets/icons/
+    - assets/svg/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
