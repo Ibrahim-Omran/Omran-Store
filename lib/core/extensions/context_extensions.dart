@@ -13,6 +13,10 @@ extension ContextExt on BuildContext {
   String translate(String langKey){
     return AppLocalizations.of(this)!.translate(langKey).toString();
   }
+  //style
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
+
+
 
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);

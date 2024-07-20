@@ -21,6 +21,9 @@ dependencies:
   flutter_dotenv: ^5.1.0
   flutter_screenutil: ^5.9.0
   flutter_native_splash: ^2.3.10
+
+  #UI Animation
+  animate_do: ^3.3.2
   #firebase
   firebase_core: ^2.27.0
 
