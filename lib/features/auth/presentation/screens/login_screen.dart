@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:omran_store/core/extensions/context_extensions.dart';
 import 'package:omran_store/features/auth/presentation/refactors/auth_custom_painter.dart';
 
-import '../refactors/login_body.dart';
+import 'package:omran_store/features/auth/presentation/refactors/login_body.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
