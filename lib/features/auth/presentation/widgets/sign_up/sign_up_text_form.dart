@@ -6,21 +6,40 @@ import 'package:omran_store/core/extensions/context_extensions.dart';
 import 'package:omran_store/core/language/lang_keys.dart';
 import 'package:omran_store/core/utils/app_regex.dart';
 
-class LoginTextForm extends StatefulWidget {
-  const LoginTextForm({super.key});
+class SignUpTextForm extends StatefulWidget {
+  const SignUpTextForm({super.key});
 
   @override
-  State<LoginTextForm> createState() => _LoginTextFormState();
+  State<SignUpTextForm> createState() => _SignUpTextFormState();
 }
 
-class _LoginTextFormState extends State<LoginTextForm> {
-
+class _SignUpTextFormState extends State<SignUpTextForm> {
   bool isShowPassword = true;
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Column(
         children: [
+
+          // Name
+          CustomFadeInRight(
+            duration: 200,
+            child: CustomTextField(
+              controller: TextEditingController(),
+              hintText: context.translate(LangKeys.fullName),
+              keyboardType: TextInputType.emailAddress,
+              validator: (value){
+                if(value == null || value.isEmpty || value.length < 4){
+                  return context.translate(LangKeys.validName);
+                }
+                return null ;
+              },
+            ),
+          ),
+
+          SizedBox(
+            height: 25.h,
+          ),
 
           // Email
           CustomFadeInRight(
@@ -52,7 +71,7 @@ class _LoginTextFormState extends State<LoginTextForm> {
               obscureText: isShowPassword,
               validator: (value){
                 if(value == null ||value.isEmpty || value.length < 6){
-                  
+
                   return context.translate(LangKeys.validPasswrod);
                 }
                 return null ;
