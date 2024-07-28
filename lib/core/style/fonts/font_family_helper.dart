@@ -1,3 +1,6 @@
+import 'package:omran_store/core/service/shared_pref/pref_keys.dart';
+import 'package:omran_store/core/service/shared_pref/shared_pref.dart';
+
 class FontFamilyHelper{
   const FontFamilyHelper._();
 
@@ -5,8 +8,7 @@ class FontFamilyHelper{
   static const String poppinsEnglish = 'Poppins';
 
   static String getLocalizedFontFamily(){
-    //ToDo: SherdPref
-    final currentLanguage = 'ar';
+    final currentLanguage = SharedPref().getString(PrefKeys.language);
     if(currentLanguage == 'ar'){
       return cairoArabic;
     }else{
